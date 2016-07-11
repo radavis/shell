@@ -1,0 +1,18 @@
+#!/bin/sh
+
+cnvrt() {
+	WIDTH=1280
+	HEIGHT=720
+
+	output_file="$(basename $1 .mp4)(720).mp4"
+
+	ffmpeg -i "$1" \
+    -vf "scale=iw*sar*min($WIDTH/(iw*sar)\,$HEIGHT/ih):ih*min($WIDTH/(iw*sar)\,$HEIGHT/ih),pad=$WIDTH:$HEIGHT:(ow-iw)/2:(oh-ih)/2" \
+    -c:v libx264 \
+    -preset slow \
+    -crf 20 \
+    -c:a aac -strict experimental \
+    -movflags \
+    +faststart \
+    "$output_file"
+}

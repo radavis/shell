@@ -1,0 +1,42 @@
+#!/bin/sh
+
+blog() {
+  open https://radavis.github.io/
+}
+
+mygists() {
+  open https://gist.github.com/radavis
+}
+
+gmail() {
+  open https://gmail.com/
+}
+
+horizon() {
+  if [ $# -eq 0 ]; then
+    folder=${PWD##*/}
+    open "https://learn.launchacademy.com/lessons/$folder"
+  else
+    open "https://learn.launchacademy.com/lessons/$1"
+  fi
+}
+
+keep() {
+  open http://keep.google.com/
+}
+
+github() {
+  open http://github.com/radavis/repositories
+}
+
+questions() {
+  open https://learn.launchacademy.com/questions?query=unanswered
+}
+
+tracker() {
+  open https://www.pivotaltracker.com/n/projects/1279426
+}
+
+twitter() {
+  open https://twitter.com/
+}

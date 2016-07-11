@@ -1,0 +1,78 @@
+#!/bin/sh
+
+sinatra_new() {
+  title=$1
+  mkdir -p $title/{models,views}
+  mkdir -p $title/public/{images,javascripts,stylesheets}
+  mkdir -p $title/spec/models
+  cd $title
+
+  dot_rspec
+  gemfile
+  rakefile
+  config_ru
+  layout_erb
+
+  echo "require 'sinatra'" > app.rb
+  echo "require 'rspec'" > spec/spec_helper.rb
+  touch public/javascripts/app.js
+  touch public/stylesheets/app.css
+}
+
+dot_rspec() {
+  read -d '' dot_rspec << EOF
+--color
+--require spec_helper
+EOF
+  echo $dot_rspec > .rspec
+}
+
+gemfile() {
+  read -d '' gemfile << EOF
+source "https://rubygems.org"
+
+gem "pry"
+gem "rspec"
+gem "sinatra"
+EOF
+  echo $gemfile > Gemfile
+}
+
+rakefile() {
+  read -d '' rakefile << EOF
+require "rspec/core/rake_task"
+
+RSpec::Core::RakeTask.new :spec do |task|
+  task.pattern = Dir["spec/**/*_spec.rb"]
+end
+
+task default: :spec
+EOF
+  echo $rakefile > Rakefile
+}
+
+layout_erb() {
+  read -d '' layout_erb << EOF
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sinatra App</title>
+  <link rel="stylesheet" href="/stylesheets/app.css">
+</head>
+
+<body>
+  <script src="/javascripts/app.js"></script>
+</body>
+</html>
+EOF
+  echo $layout_erb >> views/layout.erb
+}
+
+config_ru() {
+  read -d '' file << EOF
+require "./app"
+run Sinatra::Application
+EOF
+  echo $file >> config.ru
+}

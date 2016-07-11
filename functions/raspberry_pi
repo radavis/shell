@@ -1,0 +1,29 @@
+#!/bin/sh
+
+retropie() {
+  ssh pi@retropie.local $*
+}
+
+reboot_retropie() {
+  retropie 'sudo reboot'
+}
+
+shutdown_retropie() {
+  retropie 'sudo shutdown now'
+}
+
+kodi() {
+  ssh root@OpenELEC.local $*
+}
+
+reboot_kodi() {
+  kodi 'sudo reboot'
+}
+
+shutdown_kodi() {
+  kodi 'sudo shutdown now'
+}
+
+send_key() {
+  cat ~/.ssh/id_rsa.pub | ssh $* "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+}

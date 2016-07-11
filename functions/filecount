@@ -1,0 +1,5 @@
+#!/bin/sh
+
+filecount() {
+  ls -l | wc -l
+}

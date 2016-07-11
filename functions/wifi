@@ -1,0 +1,12 @@
+#!/bin/bash
+
+toggle_wifi() {
+  ADAPTER="en0"
+  WIFI=`/usr/sbin/networksetup -getairportpower $ADAPTER | awk '{ print $NF }'`
+
+  if [ "$WIFI" = "On" ]; then
+    `/usr/sbin/networksetup -setairportpower $ADAPTER off`
+  else
+    `/usr/sbin/networksetup -setairportpower $ADAPTER on`
+  fi
+}

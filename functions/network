@@ -1,0 +1,34 @@
+#!/bin/sh
+
+export MAC_ADDRESS="02:6b:36:a8:8a:71"
+
+spoof_mac() {
+  sudo ifconfig en0 ether $(random_mac_address)
+}
+
+random_mac_address() {
+  openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'
+}
+
+reset_mac() {
+  sudo ifconfig en0 ether "$MAC_ADDRESS"
+}
+
+mac() {
+  ifconfig en0 | grep ether
+}
+
+disconnect() {
+  sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -z
+}
+
+spoof_hostname() {
+  Names=("Home" "HomeComputer" "Notebook" "Laptop" "PC" "MyPC" "Computer" "iPod" "iPodNano" "iPhone" "Android" "Server" "Ping" "Pong")
+
+  last_index=$(( ${#Names[@]} - 1 ))
+  index=$(( $RANDOM % $last_index ))
+  name=${Names[$index]}
+
+  sudo scutil --set HostName "$name"
+  echo "Your computer is now called: $name"
+}

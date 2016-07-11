@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pserve() {
+  python -m http.server
+}
