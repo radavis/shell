@@ -6,6 +6,7 @@ A collection of functions and aliases
 
 ```
 $ git clone http://github.com/radavis/shell
+$ cp shell/config/.vars ~/.vars
 ```
 
 Add the following to your runtime config file.
@@ -13,11 +14,18 @@ Add the following to your runtime config file.
 ```
 # ~/.bashrc, ~/.zshrc, ~/.whateverrc
 
-# place environment variables in ~/.vars
+# load vars
 if [[ -a ~/.vars ]]; then
   source ~/.vars
 fi
 
-for file in /Users/rd/code/shell/aliases/*; do source $file; done
-for file in /Users/rd/code/shell/functions/*; do source $file; done
+# load aliases
+for file in $PROJECTS/shell/aliases/*; do
+  source $file
+done
+
+# load functions
+for file in $PROJECTS/shell/functions/*; do
+  source $file
+done
 ```

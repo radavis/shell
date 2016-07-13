@@ -19,7 +19,7 @@ kick() {
 }
 
 chrome() {
-  eval "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome" $*
+  eval "/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome" $*
 }
 
 incognito() {
