@@ -1,9 +1,7 @@
 #!/bin/sh
 
 temperature() {
-  lat=42.351210138538136
-  lon=-71.06012724757358
-  url="http://forecast.weather.gov/MapClick.php?lat=$lat&lon=$lon&FcstType=dwml"
+  url="http://forecast.weather.gov/MapClick.php?lat=$LATITUDE&lon=$LONGITUDE&FcstType=dwml"
   xml=$(curl -s $url)
   temperature=$(echo $xml | xmllint --xpath 'string(/dwml/data[2]/parameters/temperature[1]/value)' -)
   echo "The current temperature is... $temperature degrees F." | cowsay -f tux

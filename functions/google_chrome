@@ -1,0 +1,9 @@
+#!/bin/sh
+
+chrome() {
+  eval "$CHROME" $*
+}
+
+incognito() {
+  chrome $* -incognito
+}

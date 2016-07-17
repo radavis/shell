@@ -1,31 +1,5 @@
 #!/bin/sh
 
-cat_copy() {
-  cat "$1" | pbcopy
-  echo "contents of $1 copied to your clipboard"
-}
-
-copy() {
-  echo "$*" | pbcopy
-  echo "$* copied to your clipboard"
-}
-
-shrug()                 { copy "¯\_(ツ)_/¯" }
-flip_table()            { copy "(╯°□°）╯︵ ┻━┻" }
-replace_table()         { copy "┬─┬ノ(º_ºノ)" }
-
-kick() {
-  pkill -9 "$*"
-}
-
-chrome() {
-  eval "/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome" $*
-}
-
-incognito() {
-  chrome $* -incognito
-}
-
 copy_iso() {
   iso=$1
   disk=/dev/$2
@@ -35,10 +9,6 @@ copy_iso() {
   diskutil unmountDisk $disk
   sudo dd if=$iso.img of=$rdisk bs=1m
   diskutil eject $disk
-}
-
-pow_status() {
-  curl -H host:pow localhost/status.json
 }
 
 iso2img() {

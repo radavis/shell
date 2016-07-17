@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pow_status() {
+  curl -H host:pow localhost/status.json
+}

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+shrug() { copy "¯\_(ツ)_/¯" }
+flip_table() { copy "(╯°□°）╯︵ ┻━┻" }
+replace_table() { copy "┬─┬ノ(º_ºノ)" }
+uhoh { copy "(._.)" }
+sleepy { copy "(-_-)" }
+dizzy { copy "(@_@)" }
+amazed { copy "(o_o)" }

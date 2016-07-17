@@ -1,7 +1,5 @@
 #!/bin/sh
 
-export MAC_ADDRESS="02:6b:36:a8:8a:71"
-
 spoof_mac() {
   sudo ifconfig en0 ether $(random_mac_address)
 }

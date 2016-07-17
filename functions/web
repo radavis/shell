@@ -1,11 +1,11 @@
 #!/bin/sh
 
 blog() {
-  open https://radavis.github.io/
+  open "https://$GITHUB_USERNAME.github.io/"
 }
 
 mygists() {
-  open https://gist.github.com/radavis
+  open "https://gist.github.com/$GITHUB_USERNAME"
 }
 
 gmail() {
@@ -26,17 +26,13 @@ keep() {
 }
 
 github() {
-  open http://github.com/radavis/repositories
+  open "http://github.com/$GITHUB_USERNAME/repositories"
 }
 
 questions() {
   open https://learn.launchacademy.com/questions?query=unanswered
 }
 
-tracker() {
-  open https://www.pivotaltracker.com/n/projects/1279426
-}
-
 twitter() {
-  open https://twitter.com/
+  open "https://twitter.com/$TWITTER_USERNAME"
 }
