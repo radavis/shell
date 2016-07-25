@@ -20,3 +20,7 @@ joins() {
   shift
   echo "$*"
 }
+
+md2odt() {
+  pandoc $1.md --latex-engine=xelatex -o $1.odt
+}

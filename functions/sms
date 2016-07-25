@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sms() {
+  number=$1
+  shift
+  curl http://textbelt.com/text -d number=$number -d "message=$*"
+}

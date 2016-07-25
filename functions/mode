@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mode() {
+  stat -f %Mp%Lp $*
+}
