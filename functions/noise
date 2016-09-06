@@ -255,7 +255,7 @@ noise() {
   #  less distraction.
 
 
-  exit 0
+  return 0
   # _______________ EOS ::  END of Script ::::::::::::::::::::::::::::::::::::::::
 
 

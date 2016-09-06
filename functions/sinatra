@@ -17,6 +17,7 @@ sinatra_new() {
   echo "require 'rspec'" > spec/spec_helper.rb
   touch public/javascripts/app.js
   touch public/stylesheets/app.css
+  touch README.md
 }
 
 dot_rspec() {
@@ -53,7 +54,7 @@ EOF
 
 layout_erb() {
   read -d '' layout_erb << EOF
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
