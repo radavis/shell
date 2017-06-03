@@ -9,7 +9,6 @@ alias gd="git diff"
 alias gmm="git merge master"
 alias gs="git status"
 alias hb="hub browse"
-# alias clone="git clone"
 
 gi() {
   git init
