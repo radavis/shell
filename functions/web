@@ -4,21 +4,12 @@ blog() {
   open "https://$GITHUB_USERNAME.github.io/"
 }
 
-mygists() {
+gists() {
   open "https://gist.github.com/$GITHUB_USERNAME"
 }
 
 gmail() {
   open https://gmail.com/
-}
-
-horizon() {
-  if [ $# -eq 0 ]; then
-    folder=${PWD##*/}
-    open "https://learn.launchacademy.com/lessons/$folder"
-  else
-    open "https://learn.launchacademy.com/lessons/$1"
-  fi
 }
 
 keep() {
@@ -27,10 +18,6 @@ keep() {
 
 github() {
   open "http://github.com/$GITHUB_USERNAME/repositories"
-}
-
-questions() {
-  open https://learn.launchacademy.com/questions?query=unanswered
 }
 
 twitter() {

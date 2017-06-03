@@ -1,3 +1,4 @@
 alias reload=". ~/.zshrc"
 alias cls="clear"
 alias x="exit"
+alias fix_pf="sudo pfctl -f /etc/pf.conf; sudo pfctl -e"  # pow & vpn: https://github.com/basecamp/pow/issues/524

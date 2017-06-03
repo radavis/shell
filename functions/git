@@ -1,7 +1,35 @@
 #!/bin/sh
 
+alias gb="git branch --sort=-committerdate"
+alias pull="git pull origin $(git_current_branch)"  # git_current_branch is defined by the oh_my_zsh git plugin
+alias push="git push origin HEAD"
+alias co="git checkout"
+alias gcm="git commit -m"
+alias gd="git diff"
+alias gmm="git merge master"
+alias gs="git status"
+alias hb="hub browse"
+# alias clone="git clone"
+
 gi() {
   git init
   git add .
   git commit -m "initial"
+}
+
+clone() {
+  local remote_repo="$*"
+  local folder_name=$(basename $remote_repo .git)
+  git clone $remote_repo $folder_name
+  cd $folder_name
+}
+
+git_exloc() {
+  git config --global user.name "Exloc"
+  git config --global user.email "rdavis.bacs+exloc@gmail.com"
+}
+
+git_radavis() {
+  git config --global user.name "Richard Davis"
+  git config --global user.email "rdavis.bacs@gmail.com"
 }

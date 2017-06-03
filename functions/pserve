@@ -1,5 +1,5 @@
 #!/bin/sh
 
 pserve() {
-  python -m http.server
+  python -m SimpleHTTPServer 3000
 }
