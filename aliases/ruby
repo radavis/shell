@@ -1,1 +1,3 @@
 alias be="bundle exec"
+alias spec="be rake spec SPEC_OPTS='--tag ~js'"
+alias jspec="be rake spec SPEC_OPTS='--tag js'"

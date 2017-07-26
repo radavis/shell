@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 pow_status() {
   curl -H host:pow localhost/status.json

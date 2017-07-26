@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 react_new() {
   project=$1

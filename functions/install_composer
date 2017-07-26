@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 install_composer() {
   EXPECTED_SIGNATURE=$(wget https://composer.github.io/installer.sig -O - -q)

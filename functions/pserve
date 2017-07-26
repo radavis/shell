@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 pserve() {
   python -m SimpleHTTPServer 3000

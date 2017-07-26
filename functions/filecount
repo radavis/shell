@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 filecount() {
   ls -l | wc -l

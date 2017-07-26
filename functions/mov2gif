@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 mov2gif() {
   ffmpeg -i "$1" -r 10 -f image2pipe -vcodec ppm - |\

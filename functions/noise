@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 noise() {
   #              bash 4.1.5(1)     Linux Ubuntu 10.04           Date : 2011-10-04

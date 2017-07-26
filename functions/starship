@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# https://news.ycombinator.com/item?id=9909237
+starship() {
+  play -c2 -n synth whitenoise band -n 100 24 band -n 300 100 gain +20
+}

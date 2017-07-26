@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 shrug() { copy "¯\_(ツ)_/¯" }
 flip_table() { copy "(╯°□°）╯︵ ┻━┻" }

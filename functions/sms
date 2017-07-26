@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 sms() {
   number=$1

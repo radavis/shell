@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 sinatra_new() {
   title=$1

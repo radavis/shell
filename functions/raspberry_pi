@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 retropie() {
   ssh pi@retropie.local $*
