@@ -1,4 +1,6 @@
-alias reload=". ~/.zshrc"
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias cls="clear"
+# pow & vpn: https://github.com/basecamp/pow/issues/524
+alias fix_pf="sudo pfctl -f /etc/pf.conf; sudo pfctl -e"
+alias reload=". ~/.zshrc"
 alias x="exit"
-alias fix_pf="sudo pfctl -f /etc/pf.conf; sudo pfctl -e"  # pow & vpn: https://github.com/basecamp/pow/issues/524
