@@ -1,5 +1,0 @@
-#!/bin/bash
-
-pserve() {
-  python -m SimpleHTTPServer 3000
-}
