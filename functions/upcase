@@ -1,0 +1,5 @@
+#!/bin/bash
+
+upcase() {
+  echo "$*" | tr '[:lower:]' '[:upper:]'
+}
