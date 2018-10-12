@@ -1,17 +1,34 @@
 #!/bin/bash
 
 cnvrt() {
-	WIDTH=1280
-	HEIGHT=720
+	while getopts ":w:h:" opt; do
+		case $opt in
+			w) WIDTH="$OPTARG"
+			;;
+			h) HEIGHT="$OPTARG"
+			;;
+			\?) echo "Invalid option -$OPTARG" >&2
+			;;
+		esac
+  done
 
-	output_file="$(basename $1 .mp4)(720).mp4"
+	[ ! -z $WIDTH ] || WIDTH="1280"
+	[ ! -z $HEIGHT ] || HEIGHT="720"
+	filename=$1
 
-	ffmpeg -i "$1" \
+	if [ ! -f "$filename" ]; then
+	  echo "$filename not found"
+		exit 1
+	fi
+
+  output_file="$(basename $1.mp4)($HEIGHT).mp4"
+
+  ffmpeg -i "$1" \
     -vf "scale=iw*sar*min($WIDTH/(iw*sar)\,$HEIGHT/ih):ih*min($WIDTH/(iw*sar)\,$HEIGHT/ih),pad=$WIDTH:$HEIGHT:(ow-iw)/2:(oh-ih)/2" \
     -c:v libx264 \
     -preset slow \
     -crf 20 \
-    -c:a aac -strict experimental \
+    -c:a aac \
     -movflags \
     +faststart \
     "$output_file"
