@@ -1,0 +1,5 @@
+#!/bin/bash
+
+java_versions() {
+  /usr/libexec/java_home -V
+}
