@@ -1,0 +1,10 @@
+#!/bin/bash
+
+new_html_project() {
+  name=$1
+  mkdir "$name"
+  wget "https://github.com/h5bp/html5-boilerplate/releases/download/6.1.0/html5-boilerplate_v6.1.0.zip" -O html5boilerplate.zip
+  unzip html5boilerplate.zip -d "$name"
+  rm html5boilerplate.zip
+  cd "$name"
+}
