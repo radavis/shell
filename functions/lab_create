@@ -1,0 +1,11 @@
+#!/bin/bash
+
+lab_create() {
+  name=$1
+  test -z $name && echo "Please specify repository name" && return 1
+  test -z $GITLAB_API_TOKEN && echo "Please set the GITLAB_API_TOKEN" && return 1
+  curl \
+    -H "Content-Type:application/json" \
+    https://gitlab.com/api/v4/projects?private_token=$GITLAB_API_TOKEN \
+    -d "{ \"name\": \"$name\" }"
+}
