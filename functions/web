@@ -1,5 +1,3 @@
-#!/bin/bash
-
 blog() {
   open "https://$GITHUB_USERNAME.github.io/"
 }

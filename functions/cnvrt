@@ -1,25 +1,25 @@
-#!/bin/bash
+# cnvrt - scale video to 720p and convert to mp4 format using ffmpeg
 
 cnvrt() {
-	while getopts ":w:h:" opt; do
-		case $opt in
-			w) WIDTH="$OPTARG"
-			;;
-			h) HEIGHT="$OPTARG"
-			;;
-			\?) echo "Invalid option -$OPTARG" >&2
-			;;
-		esac
+  while getopts ":w:h:" opt; do
+    case $opt in
+      w) WIDTH="$OPTARG"
+      ;;
+      h) HEIGHT="$OPTARG"
+      ;;
+      \?) echo "Invalid option -$OPTARG" >&2
+      ;;
+    esac
   done
 
-	[ ! -z $WIDTH ] || WIDTH="1280"
-	[ ! -z $HEIGHT ] || HEIGHT="720"
-	filename=$1
+  [ ! -z $WIDTH ] || WIDTH="1280"
+  [ ! -z $HEIGHT ] || HEIGHT="720"
+  filename=$1
 
-	if [ ! -f "$filename" ]; then
-	  echo "$filename not found"
-		exit 1
-	fi
+  if [ ! -f "$filename" ]; then
+    echo "$filename not found"
+    exit 1
+  fi
 
   output_file="$(basename $1.mp4)($HEIGHT).mp4"
 

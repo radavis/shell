@@ -1,4 +1,3 @@
-#!/bin/bash
 # from http://blog.robertelder.org/bash-one-liner-compose-music/
 # may need to change 'aplay' to 'sox' to work on osx
 

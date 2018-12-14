@@ -1,4 +1,4 @@
-#!/bin/bash
+# sms - send a text message from the command line
 
 sms() {
   number=$1

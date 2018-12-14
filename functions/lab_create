@@ -1,4 +1,4 @@
-#!/bin/bash
+# lab_create - create gitlab repository
 
 lab_create() {
   name=$1

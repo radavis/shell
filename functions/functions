@@ -1,5 +1,3 @@
-#!/bin/bash
-
 copy_iso() {
   iso=$1
   disk=/dev/$2

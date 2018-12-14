@@ -1,4 +1,4 @@
-#!/bin/bash
+# java_versions - because '/usr/libexec/java_home -V' is difficult to remember
 
 java_versions() {
   /usr/libexec/java_home -V

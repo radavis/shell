@@ -5,7 +5,7 @@ A collection of functions and aliases
 # usage
 
 ```
-$ git clone http://github.com/radavis/shell
+$ git clone https://github.com/radavis/shell
 $ cp shell/config/.vars ~/.vars
 ```
 

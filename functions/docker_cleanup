@@ -1,4 +1,4 @@
-#!/bin/bash
+# docker_cleanup - this is rather destructive. useful if you want to nuke everything docker.
 
 docker_cleanup() {
   # kill all running containers

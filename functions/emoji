@@ -1,5 +1,3 @@
-#!/bin/bash
-
 shrug() { copy "¯\_(ツ)_/¯" }
 flip_table() { copy "(╯°□°）╯︵ ┻━┻" }
 replace_table() { copy "┬─┬ノ(º_ºノ)" }

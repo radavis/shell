@@ -1,4 +1,4 @@
-#!/bin/bash
+# sinatra_new - boilerplate for a new sinatra app
 
 sinatra_new() {
   title=$1

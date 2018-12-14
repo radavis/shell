@@ -1,4 +1,4 @@
-#!/bin/bash
+# ffind - return files in subtree that match substring argument
 
 ffind() {
   find . -iname "*$1*" \

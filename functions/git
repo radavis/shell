@@ -1,5 +1,3 @@
-#!/bin/bash
-
 alias gb="git branch --sort=-committerdate"
 alias pull="git pull origin $(git_current_branch)"  # git_current_branch is defined by the oh_my_zsh git plugin
 alias push="git push origin HEAD"

@@ -1,5 +1,3 @@
-#!/bin/bash
-
 install_composer() {
   EXPECTED_SIGNATURE=$(wget https://composer.github.io/installer.sig -O - -q)
   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"

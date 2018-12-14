@@ -1,5 +1,3 @@
-#!/bin/bash
-
 toggle_wifi() {
   ADAPTER="en0"
   WIFI=`/usr/sbin/networksetup -getairportpower $ADAPTER | awk '{ print $NF }'`

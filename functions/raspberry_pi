@@ -1,4 +1,5 @@
-#!/bin/bash
+# raspberry_pi related commands
+# some of these would be better suited as statements in ~/.ssh/config
 
 retropie() {
   ssh pi@retropie.local $*

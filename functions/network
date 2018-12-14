@@ -1,5 +1,3 @@
-#!/bin/bash
-
 spoof_mac() {
   sudo ifconfig en0 ether $(random_mac_address)
 }

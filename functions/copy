@@ -1,5 +1,3 @@
-#!/bin/bash
-
 cat_copy() {
   cat "$1" | pbcopy
   echo "contents of $1 copied to your clipboard"

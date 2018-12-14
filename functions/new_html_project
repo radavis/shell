@@ -1,4 +1,4 @@
-#!/bin/bash
+# new_html_project - unpack the html5 boilerplate into a new folder
 
 new_html_project() {
   name=$1

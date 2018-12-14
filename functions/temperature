@@ -1,4 +1,4 @@
-#!/bin/bash
+# temperature - get temperature based on latitude and longitude
 
 temperature() {
   url="http://forecast.weather.gov/MapClick.php?lat=$LATITUDE&lon=$LONGITUDE&FcstType=dwml"

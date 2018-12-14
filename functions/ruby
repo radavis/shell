@@ -1,4 +1,4 @@
-#!/bin/bash
+# ruby_new - boilerplate for a new ruby project
 
 ruby_new() {
   title=$1

@@ -1,5 +1,6 @@
-#!/bin/bash
+# filemode - return the permissions of a file in WUGO format
+# https://en.wikipedia.org/wiki/Modes_(Unix)
 
-mode() {
+filemode() {
   stat -f %Mp%Lp $*
 }
