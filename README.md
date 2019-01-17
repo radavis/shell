@@ -2,7 +2,7 @@
 
 A collection of functions and aliases
 
-# usage
+## usage
 
 ```
 $ git clone https://github.com/radavis/shell

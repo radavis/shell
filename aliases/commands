@@ -10,3 +10,5 @@ alias fix_pf="sudo pfctl -f /etc/pf.conf; sudo pfctl -e"
 alias t="todo.sh -d ~/.todo.cfg"
 alias reload=". ~/.zshrc"
 alias x="exit"
+
+alias weather='curl wttr.in/Baltimore'

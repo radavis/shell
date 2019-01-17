@@ -1,0 +1,5 @@
+# Have I been pwned?
+# usage: `hibp email@example.com`
+hibp() {
+   curl -fsS "https://haveibeenpwned.com/api/v2/breachedaccount/$1" | jq -r 'sort_by(.BreachDate)[] | [.Title,.Domain,.BreachDate,.PwnCount] | @tsv' | column -t -s$'\t'
+}
