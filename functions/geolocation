@@ -1,0 +1,7 @@
+geolocation() {
+  ip=$(ipecho)
+  json=$(curl -s "https://tools.keycdn.com/geo.json?host=$ip")
+  latitude=$(echo $json | jq '.data.geo.latitude')
+  longitude=$(echo $json | jq '.data.geo.longitude')
+  echo "$latitude $longitude"
+}
