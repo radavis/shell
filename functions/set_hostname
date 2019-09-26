@@ -1,0 +1,6 @@
+function set_hostname() {
+  scutil --set HostName $@
+  scutil --set LocalHostName $@
+  scutil --set ComputerName $@
+  dscacheutil -flushcache
+}

@@ -1,7 +1,7 @@
 # homebrew https://gist.github.com/indiesquidge/ec010eca3ffa254788c2
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+# alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias cls="clear"
 
 # pow & vpn: https://github.com/basecamp/pow/issues/524
@@ -12,3 +12,7 @@ alias reload=". ~/.zshrc"
 alias x="exit"
 
 alias weather='curl wttr.in/Baltimore'
+
+alias mnt='mount | grep -E ^/dev | column -t'
+alias count='find . -type f | wc -l'
+alias cpv='rsync -ah --info=progress2'

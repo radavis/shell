@@ -7,6 +7,7 @@ alias gd="git diff"
 alias gmm="git merge master"
 alias gs="git status"
 alias hb="hub browse"
+alias gh='history | grep'
 
 gi() {
   git init

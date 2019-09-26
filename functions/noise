@@ -44,10 +44,10 @@ noise() {
   #                 subsequent comments. See below for relevant portions.
 
   #           _____ Prelims
-  set -u
+  # set -u
   #   ^ unbound (i.e. unassigned) variables shall be errors.
   #           Example of default assignment:    arg1=${1:-'foo'}
-  set -e
+  # set -e
   #   ^ error checking :: Highly Recommended (caveat:  you can't check $? later).
   #
   # _______________     ::  BEGIN  Script ::::::::::::::::::::::::::::::::::::::::
@@ -253,7 +253,7 @@ noise() {
   #  less distraction.
 
 
-  return 0
+  # return 0  # no need to return a value, since this is a function
   # _______________ EOS ::  END of Script ::::::::::::::::::::::::::::::::::::::::
 
 
