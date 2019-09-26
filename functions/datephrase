@@ -1,0 +1,15 @@
+day_suffix() {
+  # https://stackoverflow.com/a/21370675/2675670
+  day_number=$(date +%d)
+  case day_number in
+    1|21|31) echo "st";;
+    2|22)    echo "nd";;
+    3|23)    echo "rd";;
+    *)       echo "th";;
+  esac
+}
+
+datephrase() {
+  suffix=$(day_suffix)
+  date "+%A, %B %-d$suffix, %Y"
+}
