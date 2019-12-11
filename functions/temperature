@@ -1,7 +1,11 @@
 # temperature - get temperature based on latitude and longitude
 
 temperature() {
-  url="http://forecast.weather.gov/MapClick.php?lat=$LATITUDE&lon=$LONGITUDE&FcstType=dwml"
+  ip=$(ipecho)
+  json=$(curl -s "https://tools.keycdn.com/geo.json?host=$ip")
+  latitude=$(echo $json | jq '.data.geo.latitude')
+  longitude=$(echo $json | jq '.data.geo.longitude')
+  url="http://forecast.weather.gov/MapClick.php?lat=$latitude&lon=$longitude&FcstType=dwml"
   xml=$(curl -s $url)
   temperature=$(echo $xml | xmllint --xpath 'string(/dwml/data[2]/parameters/temperature[1]/value)' -)
   echo "The current temperature is... $temperature degrees F." | cowsay -f tux

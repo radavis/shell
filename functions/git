@@ -31,3 +31,5 @@ git_radavis() {
   git config --global user.name "Richard Davis"
   git config --global user.email "rdavis.bacs@gmail.com"
 }
+
+alias gitout="git add . && git commit -m 'Emergency commit 🔥' && git push origin head"

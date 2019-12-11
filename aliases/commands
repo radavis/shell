@@ -16,3 +16,5 @@ alias weather='curl wttr.in/Baltimore'
 alias mnt='mount | grep -E ^/dev | column -t'
 alias count='find . -type f | wc -l'
 alias cpv='rsync -ah --info=progress2'
+
+alias idea='env $(cat .env | xargs) open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" $*'
