@@ -6,7 +6,7 @@ A collection of functions and aliases
 
 ```
 $ git clone https://github.com/radavis/shell
-$ cp shell/config/.vars ~/.vars
+$ cp shell/.vars ~/.vars
 ```
 
 Add the following to your runtime config file.
@@ -19,13 +19,8 @@ if [[ -a ~/.vars ]]; then
   source ~/.vars
 fi
 
-# load aliases
-for file in $PROJECTS/shell/aliases/*; do
-  source $file
-done
-
-# load functions
-for file in $PROJECTS/shell/functions/*; do
+# load shell settings
+for file in $PROJECTS/shell/{aliases,config,functions}/*; do
   source $file
 done
 ```

@@ -21,4 +21,8 @@ alias mnt='mount | grep -E ^/dev | column -t'
 alias count='find . -type f | wc -l'
 alias cpv='rsync -ah --info=progress2'
 
-alias idea='env $(cat .env | xargs) open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" $*'
+alias load_dotenv='env $(cat .env | xargs) $*'
+alias idea='open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" $*'
+
+# https://github.com/rndusr/stig
+alias stig="command stig --rcfile ~/.stigrc"

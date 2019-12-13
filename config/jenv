@@ -1,0 +1,2 @@
+# jenv for managing java versions
+eval "$(jenv init -)"
