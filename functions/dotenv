@@ -1,3 +1,5 @@
+# https://www.mokacoding.com/blog/env-xargs/
+
 dotenv() {
   dotenv_file=${DOTENV:-.env}
   env $(grep -v '^#' $dotenv_file | xargs) $*

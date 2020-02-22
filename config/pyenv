@@ -1,0 +1,5 @@
+# python
+export PYENV_ROOT="/usr/local/opt/pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PYTHON_CONFIGURE_OPTS="--enable-framework"  # for getting pyinstaller to work
+eval "$(pyenv init -)"
