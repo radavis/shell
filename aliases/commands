@@ -18,3 +18,7 @@ alias count='find . -type f | wc -l'
 alias cpv='rsync -ah --info=progress2'
 
 alias idea='env $(cat .env | xargs) open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" $*'
+
+# https://www.mokacoding.com/blog/env-xargs/
+#alias load_dotenv='env $(cat .env | grep -v "#" | xargs) $*'
+#alias load_dotenv='env $(grep -v '^#' .env | xargs)' $*
