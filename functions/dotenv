@@ -1,5 +1,10 @@
 # https://www.mokacoding.com/blog/env-xargs/
 
+# usage: 
+#   dotenv app-that-consumes-env-vars
+#   DOTENV=.env.test dotenv app-that-consumes-env-vars
+
+
 dotenv() {
   dotenv_file=${DOTENV:-.env}
   env $(grep -v '^#' $dotenv_file | xargs) $*

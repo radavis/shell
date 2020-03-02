@@ -1,7 +1,12 @@
+export CHROME="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
 chrome() {
-  eval "$CHROME" $*
+  eval "$CHROME" $* &> /dev/null &
 }
 
 incognito() {
-  chrome $* -incognito
+  eval "$CHROME" -incognito $* &> /dev/null &
 }
+
+# https://www.technipages.com/google-chrome-bypass-your-connection-is-not-private-message
+# chrome --ignore-certificate-errors
