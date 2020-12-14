@@ -1,9 +1,8 @@
 # https://www.mokacoding.com/blog/env-xargs/
 
-# usage: 
+# usage:
 #   dotenv app-that-consumes-env-vars
 #   DOTENV=.env.test dotenv app-that-consumes-env-vars
-
 
 dotenv() {
   dotenv_file=${DOTENV:-.env}

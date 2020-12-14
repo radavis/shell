@@ -26,3 +26,5 @@ alias idea='env $(cat .env | xargs) open -a "`ls -dt /Applications/IntelliJ\ IDE
 
 # https://github.com/rndusr/stig
 alias stig="command stig --rcfile ~/.stigrc"
+
+alias dc="docker-compose"

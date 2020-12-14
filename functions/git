@@ -7,13 +7,12 @@ alias gd="git diff"
 alias gmm="git merge master"
 alias gs="git status"
 alias hb="hub browse"
-alias gh='history | grep'
 
-gi() {
-  git init
-  git add .
-  git commit -m "initial"
-}
+# gi() {
+#   git init
+#   git add .
+#   git commit -m "initial"
+# }
 
 clone() {
   local remote_repo="$*"
@@ -32,4 +31,5 @@ git_radavis() {
   git config --global user.email "rdavis.bacs@gmail.com"
 }
 
-alias gitout="git add . && git commit -m 'Emergency commit 🔥' && git push origin head"
+alias gitout="git add . && git commit -m 'Emergency commit 🔥' && git push origin HEAD"
+alias git_branch_cleanup="git branch | grep -v "master" | xargs git branch -D"

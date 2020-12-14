@@ -1,2 +1,2 @@
 alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
-alias nvlc="vlc --intf ncurses --browse-dir $MUSIC"
+alias nvlc="vlc --intf ncurses --browse-dir ${MUSIC:-~}"
