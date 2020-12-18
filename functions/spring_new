@@ -1,0 +1,20 @@
+spring_new() {
+  local platform_version="2.3.7.RELEASE"
+  local project_name=$1
+  
+  if [[ "$project_name" ]]; then
+    mkdir "$project_name"
+    cd "$project_name"
+    curl -O https://start.spring.io/starter.zip \
+      -d type=gradle-project \
+      -d platformVersion="$platform_version" \
+      -d dependencies=data-jpa,flyway,lombok,mysql,web,validation \
+      -d groupId=mil.usaf \
+      -d artifactId="$project_name"
+  
+    unzip starter.zip
+    rm starter.zip
+  else
+    echo "usage: spring_new project_name"
+  fi
+}
