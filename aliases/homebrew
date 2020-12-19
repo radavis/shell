@@ -1,0 +1,2 @@
+# homebrew https://gist.github.com/indiesquidge/ec010eca3ffa254788c2
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'

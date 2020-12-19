@@ -1,3 +1,0 @@
-#alias lt='ls --human-readable --size -1 -S --classify'
-alias lt='du -sh * | sort -h'
-alias left='ls -t -1'

@@ -1,0 +1,21 @@
+alias t="todo.sh -d ~/.todo.cfg"
+
+# https://github.com/rndusr/stig
+alias stig="command stig --rcfile ~/.stigrc"
+
+# pow & vpn: https://github.com/basecamp/pow/issues/524
+alias fix_pf="sudo pfctl -f /etc/pf.conf; sudo pfctl -e"
+
+alias reload=". ~/.zshrc"
+alias ag='ag --path-to-ignore ~/.ignore'
+
+alias weather='curl wttr.in/Baltimore'
+
+alias mnt='mount | grep -E ^/dev | column -t'
+alias count='find . -type f | wc -l'
+alias cpv='rsync -ah --info=progress2'
+
+alias idea='env $(cat .env | xargs) open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" $*'
+# alias idea='open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" $*'
+
+alias dc="docker-compose"

@@ -1,30 +1,15 @@
-# homebrew https://gist.github.com/indiesquidge/ec010eca3ffa254788c2
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
-
-# alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias cls="clear"
-# alias chrome="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-
-# pow & vpn: https://github.com/basecamp/pow/issues/524
-alias fix_pf="sudo pfctl -f /etc/pf.conf; sudo pfctl -e"
-
 alias c="clear"
 alias cls="clear"
-alias t="todo.sh -d ~/.todo.cfg"
-alias reload=". ~/.zshrc"
+
+alias chx="chmod +x"
+
+alias ..="cd .."
+alias ...="cd ../.."
+
+#alias lt='ls --human-readable --size -1 -S --classify'
+alias lt='du -sh * | sort -h'
+alias left='ls -t -1'
+
 alias x="exit"
-alias ag='ag --path-to-ignore ~/.ignore'
 
-alias weather='curl wttr.in/Baltimore'
-
-alias mnt='mount | grep -E ^/dev | column -t'
-alias count='find . -type f | wc -l'
-alias cpv='rsync -ah --info=progress2'
-
-alias idea='env $(cat .env | xargs) open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" $*'
-# alias idea='open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" $*'
-
-# https://github.com/rndusr/stig
-alias stig="command stig --rcfile ~/.stigrc"
-
-alias dc="docker-compose"
+mkcd() { mkdir -p "$@" && cd "$@"; }
